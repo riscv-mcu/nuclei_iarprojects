@@ -58,10 +58,12 @@ extern "C" {
 #define RTC_FREQ                    32768
 // The TIMER frequency is just the RTC frequency
 #define SOC_TIMER_FREQ              RTC_FREQ
+
 #ifndef SYSTEM_CLOCK
-#define SYSTEM_CLOCK                (160000000UL)
+#define SYSTEM_CLOCK                (16000000UL)
 #endif
-  
+
+extern volatile uint32_t SystemCoreClock;
 
 #ifdef __cplusplus
 }

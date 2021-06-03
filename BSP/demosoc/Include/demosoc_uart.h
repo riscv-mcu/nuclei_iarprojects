@@ -10,13 +10,13 @@ extern "C" {
 #endif
   
 typedef struct {
-    uint32_t TXFIFO;
-    uint32_t RXFIFO;
-    uint32_t TXCTRL;
-    uint32_t RXCTRL;
-    uint32_t IE;
-    uint32_t IP;
-    uint32_t DIV;
+    volatile uint32_t TXFIFO;
+    volatile uint32_t RXFIFO;
+    volatile uint32_t TXCTRL;
+    volatile uint32_t RXCTRL;
+    volatile uint32_t IE;
+    volatile uint32_t IP;
+    volatile uint32_t DIV;
 } UART_TypeDef;
   
 /* Register offsets */

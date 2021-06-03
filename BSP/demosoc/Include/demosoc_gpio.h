@@ -9,23 +9,23 @@ extern "C" {
 #endif
   
 typedef struct {  /*!< GPIO Structure */
-    uint32_t INPUT_VAL;
-    uint32_t INPUT_EN;
-    uint32_t OUTPUT_EN;
-    uint32_t OUTPUT_VAL;
-    uint32_t PULLUP_EN;
-    uint32_t DRIVE;
-    uint32_t RISE_IE;
-    uint32_t RISE_IP;
-    uint32_t FALL_IE;
-    uint32_t FALL_IP;
-    uint32_t HIGH_IE;
-    uint32_t HIGH_IP;
-    uint32_t LOW_IE;
-    uint32_t LOW_IP;
-    uint32_t IOF_EN;
-    uint32_t IOF_SEL;
-    uint32_t OUTPUT_XOR;
+    volatile uint32_t INPUT_VAL;
+    volatile uint32_t INPUT_EN;
+    volatile uint32_t OUTPUT_EN;
+    volatile uint32_t OUTPUT_VAL;
+    volatile uint32_t PULLUP_EN;
+    volatile uint32_t DRIVE;
+    volatile uint32_t RISE_IE;
+    volatile uint32_t RISE_IP;
+    volatile uint32_t FALL_IE;
+    volatile uint32_t FALL_IP;
+    volatile uint32_t HIGH_IE;
+    volatile uint32_t HIGH_IP;
+    volatile uint32_t LOW_IE;
+    volatile uint32_t LOW_IP;
+    volatile uint32_t IOF_EN;
+    volatile uint32_t IOF_SEL;
+    volatile uint32_t OUTPUT_XOR;
 } GPIO_TypeDef;
 
 #define GPIO_INPUT_VAL      (0x00)

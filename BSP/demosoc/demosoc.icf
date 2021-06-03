@@ -10,8 +10,8 @@ define exported symbol _uses_clic=1;
 
 define memory mem with size = 4G;
 
-define region ROM_region32 = mem:[from 0x80000000 to 0x8003FFFF];
-define region RAM_region32 = mem:[from 0x90000000 to 0x9003FFFF];
+define region ROM_region32 = mem:[from 0x80000000 to 0x8000FFFF];
+define region RAM_region32 = mem:[from 0x90000000 to 0x9000FFFF];
 
 initialize by copy { rw };
 do not initialize  { section *.noinit };

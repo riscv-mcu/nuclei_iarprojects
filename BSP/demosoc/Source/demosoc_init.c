@@ -1,6 +1,6 @@
 #include "nuclei_demosoc.h"
 
-uint32_t SystemCoreClock = SYSTEM_CLOCK;
+volatile uint32_t SystemCoreClock = SYSTEM_CLOCK;
 
 static uint32_t get_timer_freq()
 {
@@ -14,7 +14,7 @@ uint32_t measure_cpu_freq(uint32_t n)
     volatile uint32_t mtime_freq = get_timer_freq();
 
     // Don't start measuruing until we see an mtime tick
-    uint32_t tmp = (uint32_t)SysTimer->MTIMER;
+    volatile uint32_t tmp = (uint32_t)SysTimer->MTIMER;
     do {
         start_mtime = (uint32_t)SysTimer->MTIMER;
         start_mcycle = __read_csr(CSR_MCYCLE);

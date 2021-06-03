@@ -1,7 +1,5 @@
 #include "nuclei_demosoc.h"
 
-extern uint32_t SystemCoreClock;
-
 int32_t uart_init(UART_TypeDef* uart, uint32_t baudrate)
 {
     if (__RARELY(uart == NULL)) {

@@ -40,20 +40,20 @@ typedef union {
  * \brief Access to the structure of a vector interrupt controller.
  */
 typedef struct {
-    uint8_t  INTIP;                       /*!< Offset: 0x000 (R/W)  Interrupt set pending register */
-    uint8_t  INTIE;                       /*!< Offset: 0x001 (R/W)  Interrupt set enable register */
-    uint8_t  INTATTR;                     /*!< Offset: 0x002 (R/W)  Interrupt set attributes register */
-    uint8_t  INTCTRL;                     /*!< Offset: 0x003 (R/W)  Interrupt configure register */
+    volatile uint8_t  INTIP;                       /*!< Offset: 0x000 (R/W)  Interrupt set pending register */
+    volatile uint8_t  INTIE;                       /*!< Offset: 0x001 (R/W)  Interrupt set enable register */
+    volatile uint8_t  INTATTR;                     /*!< Offset: 0x002 (R/W)  Interrupt set attributes register */
+    volatile uint8_t  INTCTRL;                     /*!< Offset: 0x003 (R/W)  Interrupt configure register */
 } CLIC_CTRL_Type;
 
 typedef struct {
-    uint8_t   CFG;                        /*!< Offset: 0x000 (R/W)  CLIC configuration register */
-    uint8_t RESERVED0[3];
-    uint32_t  INFO;                        /*!< Offset: 0x004 (R/ )  CLIC information register */
-    uint8_t RESERVED1[3];
-    uint8_t  MTH;                         /*!< Offset: 0x00B (R/W)  CLIC machine mode threshold register */
-    uint32_t RESERVED2[0x3FD];
-    CLIC_CTRL_Type CTRL[4096];                  /*!< Offset: 0x1000 (R/W) CLIC register structure for INTIP, INTIE, INTATTR, INTCTL */
+    volatile uint8_t   CFG;                        /*!< Offset: 0x000 (R/W)  CLIC configuration register */
+    volatile uint8_t RESERVED0[3];
+    volatile uint32_t  INFO;                        /*!< Offset: 0x004 (R/ )  CLIC information register */
+    volatile uint8_t RESERVED1[3];
+    volatile uint8_t  MTH;                         /*!< Offset: 0x00B (R/W)  CLIC machine mode threshold register */
+    volatile uint32_t RESERVED2[0x3FD];
+    volatile CLIC_CTRL_Type CTRL[4096];                  /*!< Offset: 0x1000 (R/W) CLIC register structure for INTIP, INTIE, INTATTR, INTCTL */
 } CLIC_Type;
 
 #ifdef __cplusplus
