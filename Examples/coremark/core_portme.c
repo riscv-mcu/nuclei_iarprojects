@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <intrinsics.h>
+#include "nuclei_demosoc.h"
 #include "coremark.h"
 
 #if VALIDATION_RUN
@@ -62,13 +62,9 @@ CORE_TICKS get_time(void)
     return t1 - t0;
 }
 
-extern uint32_t SystemCoreClock;
-
 secs_ret time_in_secs(CORE_TICKS ticks)
 {
-    // scale timer down to avoid uint64_t -> double conversion in RV32
-    int scale = 256;
-    uint64_t delta = ticks / scale;
-    uint64_t freq = SystemCoreClock / scale;
-    return delta / (double)freq;
+    secs_ret retval;
+    retval = (secs_ret)ticks / (secs_ret)SystemCoreClock;
+    return retval;
 }

@@ -6,7 +6,11 @@
 //#define FLAGS_STR "-O3 -fno-common -funroll-loops -finline-functions  -falign-functions=4 -falign-jumps=4 -falign-loops=4 -funswitch-loops -fpeel-loops -fgcse-sm -fgcse-las"
 //#define FLAGS_STR "-O2 -fno-common -funroll-loops -finline-functions -falign-functions=4 -falign-jumps=4 -falign-loops=4"
 #ifndef FLAGS_STR
+#ifdef __IAR_SYSTEMS_ICC__
+#define FLAGS_STR ""
+#else
 #define FLAGS_STR "-O2 -funroll-all-loops -finline-limit=600 -ftree-dominator-opts -fno-if-conversion2 -fselective-scheduling -fno-code-hoisting -fno-common -funroll-loops -finline-functions -falign-functions=4 -falign-jumps=4 -falign-loops=4"
+#endif
 #endif
 
 #ifndef PERFORMANCE_RUN
