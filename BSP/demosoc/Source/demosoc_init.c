@@ -57,8 +57,13 @@ void SystemBannerPrint(void)
 void _premain_init(void)
 {
     SystemCoreClock = get_cpu_freq();
+#if defined(DEBUG_SEMIHOST) && DEBUG_SEMIHOST == 0
     gpio_iof_config(GPIO, IOF0_UART0_MASK, IOF_SEL_0);
     uart_init(SOC_DEBUG_UART, 115200);
+    printf("Debug messages are printed via real UART\n");
+#else
+    printf("Debug messages are printed via semihosting such as IAR debugger or Segger RTT\n");
+#endif
     /* Display banner after UART initialized */
     SystemBannerPrint();
 }

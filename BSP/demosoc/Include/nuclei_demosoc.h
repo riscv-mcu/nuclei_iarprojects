@@ -63,6 +63,11 @@ extern "C" {
 #define SYSTEM_CLOCK                (16000000UL)
 #endif
 
+/** Set DEBUG_SEMIHOST to 1 if you want to use Segger RTT or IAR Debug Print */
+#ifndef DEBUG_SEMIHOST
+#define DEBUG_SEMIHOST              1
+#endif
+
 extern volatile uint32_t SystemCoreClock;
 
 #ifdef __cplusplus

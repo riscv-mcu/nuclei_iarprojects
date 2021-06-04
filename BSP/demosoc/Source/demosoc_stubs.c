@@ -1,5 +1,6 @@
 #include "nuclei_demosoc.h"
 
+#if defined(DEBUG_SEMIHOST) && DEBUG_SEMIHOST == 0
 int putchar(int ch)
 {
     if (ch == '\n') {
@@ -9,3 +10,4 @@ int putchar(int ch)
 
     return ch;
 }
+#endif
