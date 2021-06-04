@@ -16,7 +16,7 @@
                 <debug>1</debug>
                 <option>
                     <name>GDeviceSelect</name>
-                    <state>RV32	RV32</state>
+                    <state>N300	Nuclei N300</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>

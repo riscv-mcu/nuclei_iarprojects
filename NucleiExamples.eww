@@ -4,7 +4,13 @@
         <path>$WS_DIR$\Examples\coremark\coremark.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Examples\dhrystone\dhrystone.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Examples\helloworld\hellworld.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Examples\whetstone\whetstone.ewp</path>
     </project>
     <batchBuild />
 </workspace>
