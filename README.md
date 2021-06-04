@@ -26,7 +26,7 @@
 
 IAR与JTAG各接口对应关系如下图：
 
-![image-20210604110230769](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604110230769.png)
+![image-20210604110230769](doc\pictures\image-20210604110230769.png)
 
 其中`VTref`需要单独接到开发板上3.3V的接口。
 
@@ -42,13 +42,13 @@ IAR与JTAG各接口对应关系如下图：
 
 如果使用`ADA-MIPI20-ARM20 adapter`其接口如下：
 
-![image-20210604111009217](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604111009217.png)
+![image-20210604111009217](doc\pictures\image-20210604111009217.png)
 
 需要连接的引脚与上面一致。
 
 参考连接实物图如下，图中使用的是`ADA-MIPI20-ARM20 adapter` 连接：
 
-![image-20210604111518889](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604111518889.png)
+![image-20210604111518889](doc\pictures\image-20210604111518889.png)
 
 
 
@@ -56,11 +56,11 @@ IAR与JTAG各接口对应关系如下图：
 
 IAR中打开Nuclei IAR Projects如下：
 
-![image-20210604111802761](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604111802761.png)
+![image-20210604111802761](doc\pictures\image-20210604111802761.png)
 
-点击![image-20210604111927172](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604111927172.png)编译工程，连接好调试器，打开开发板电源，点击![image-20210604112000805](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604112000805.png)开始下载调试。调试界面如下：
+点击![image-20210604111927172](doc\pictures\image-20210604111927172.png)编译工程，连接好调试器，打开开发板电源，点击![image-20210604112000805](doc\pictures\image-20210604112000805.png)开始下载调试。调试界面如下：
 
-![image-20210604112326536](C:\Users\24954\AppData\Roaming\Typora\typora-user-images\image-20210604112326536.png)
+![image-20210604112326536](doc\pictures\image-20210604112326536.png)
 
 有关调试的详细功能介绍，请参考IAR内菜单栏`Help -> C-SPY Debugging Guide`和`Help -> Debug Probes User Guide` 。
 
